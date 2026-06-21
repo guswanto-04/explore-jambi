@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo h2{
+    font-family:'pacifico',cursive;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f2;
+    color: #333;
+}
+
+/* HEADER */
+
+header {
+    background: #2e5d34;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    /* Mengubah susunan menjadi vertikal ke bawah */
+    flex-direction: column; 
+    /* Membuat semua konten di dalamnya jadi rata tengah */
+    align-items: center;    
+    gap: 15px; /* Memberi jarak antara logo dan menu navigasi */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center; /* Membuat teks di dalam elemen logo rata tengah */
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+nav a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+nav a:hover{
+    color: #ffd54f;
+}
+
+/* HERO */
+
+.hero{
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),
+        url("../gambar/gunung-kerinci.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+.hero-content p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-content{
+    max-width: 800px;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* BACKGROUND SETIAP SECTION */
+.container h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+.section-bg{
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.88),
+            rgba(255,255,255,0.88)
+        ),
+        url("../gambar/gunung-kerinci.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* CONTAINER */
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.container h2{
+    text-align: center;
+    color: #2e5d34;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+/* BUTTON */
+
+.btn{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background: #2e5d34;
+    color: white;
+
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover{
+    background: #234627;
+}
+
+/* CARD */
+
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card{
+    width: 320px;
+    background: white;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding: 15px 15px 10px;
+    color: #2e5d34;
+}
+.card h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.card p{
+    padding: 0 15px 20px;
+    line-height: 1.6;
+}
+.card p{
+    font-family: 'Poppins', sans-serif;
+}
+/* TABLE OPEN TRIP */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+th{
+    font-family: 'Montserrat', sans-serif;
+}
+table,
+th,
+td{
+    border: 1px solid #ddd;
+}
+
+th{
+    background: #2e5d34;
+    color: white;
+}
+
+th,
+td{
+    padding: 15px;
+    text-align: center;
+}
+td{
+    font-family: 'Poppins', sans-serif;
+}
+/* FORM BOOKING */
+
+form{
+    background: white;
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+form label{
+    font-weight: bold;
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* TENTANG */
+
+#tentang {
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+footer{
+    background: #1f3d23;
+    color: rgba(253, 253, 253, 0.913);
+
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav{
+        margin-top: 15px;
+    }
+
+    nav a{
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    .hero-content h1{
+        font-size: 40px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
+
+.card-link-wrapper {
+        text-decoration: none;
+        display: block;
+    }
+
+    .card-link-wrapper:hover img {
+        transform: scale(1.03);
+        transition: transform 0.3s ease;
+    }
+
+    .read-more-link {
+        display: inline-block;
+        padding: 0 15px 20px;
+        color: #2e5d34;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .read-more-link:hover {
+        color: #ffd54f;
+        text-decoration: underline;
+    }
+
+
+    .gallery-img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-img:hover{
+    transform: scale(1.05);
+}
+
+#lightbox{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-img{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+#close{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
